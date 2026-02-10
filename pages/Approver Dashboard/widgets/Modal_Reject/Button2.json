@@ -37,7 +37,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{ \n  UpdateStatus.run(\n    () => { \n      showAlert('ปฏิเสธคำขอเรียบร้อย', 'success'); \n      closeModal('Modal_Reject');  // ปิด Modal\n      \n      // สั่งรีเฟรชตาราง (ใส่ชื่อ Query ดึงข้อมูลของคุณตรงนี้)\n      Get_All_Requests.run(); \n    }, \n    () => showAlert('เกิดข้อผิดพลาด', 'error'), \n    { \n      // ส่งค่าไปให้ API\n      id: appsmith.store.selected_request_id,  // ดึง ID ที่แปะไว้ตะกี้\n      status: 'Rejected',\n      reason: inp_reject_reason.text           // ดึงเหตุผลจากช่องกรอก\n    } \n  ) \n}}",
+  "onClick": "{{ \n  ApproveLeave.run(\n    () => { \n      showAlert('ปฏิเสธคำขอเรียบร้อย', 'success'); \n      closeModal('Modal_Reject');  // ปิด Modal\n      \n      // สั่งรีเฟรชตาราง (ใส่ชื่อ Query ดึงข้อมูลของคุณตรงนี้)\n      Get_All_Requests.run(); \n    }, \n    () => showAlert('เกิดข้อผิดพลาด', 'error'), \n    { \n      // ส่งค่าไปให้ API\n      id: appsmith.store.selected_request_id,  // ดึง ID ที่แปะไว้ตะกี้\n      status: 'Rejected',\n      reason: inp_reject_reason.text           // ดึงเหตุผลจากช่องกรอก\n    } \n  ) \n}}",
   "parentId": "wxgdfb4woz",
   "placement": "CENTER",
   "recaptchaType": "V3",

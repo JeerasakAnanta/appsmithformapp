@@ -32,7 +32,7 @@
   "mobileRightColumn": 33,
   "mobileTopRow": 21,
   "needsErrorInfo": false,
-  "onClick": "{{SubmitLeaveRequest.run().then(() => {\n  showAlert('ส่งข้อมูลเรียบร้อย', '');\n});}}",
+  "onClick": "{{JSObject1.submitLeave();}}",
   "originalBottomRow": 47,
   "originalTopRow": 43,
   "parentColumnSpace": 15.5078125,

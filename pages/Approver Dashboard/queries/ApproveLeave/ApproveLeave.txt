@@ -1,0 +1,5 @@
+{
+  "request_id": {{ this.params.id }},      
+  "status": {{ this.params.status }},
+  "approver": {{ appsmith.user.email }}
+}

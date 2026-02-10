@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "6989a863233bc531e8c7654a_f398eeda-b284-43a4-add5-196b3caa91df",
-  "id": "ฟอร์มการลา  Appsithm_JSObject1.checkAndSubmit",
+  "gitSyncId": "6989a863233bc531e8c7654a_fdfe19a2-6fba-4abf-9eb3-9fed610773fd",
+  "id": "ฟอร์มการลา  Appsithm_JSObject1.submitLeave",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -22,8 +22,8 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "JSObject1.checkAndSubmit",
-    "name": "checkAndSubmit",
+    "fullyQualifiedName": "JSObject1.submitLeave",
+    "name": "submitLeave",
     "pageId": "ฟอร์มการลา  Appsithm",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

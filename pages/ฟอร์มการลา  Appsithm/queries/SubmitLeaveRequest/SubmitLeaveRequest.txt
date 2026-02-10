@@ -1,8 +1,9 @@
 {
-	"name": "{{Input_username.text}}",
-	"leave_type": "{{Select_LeaveType.selectedOptionValue}}",
-	"start_date": {{ moment(DatePicker_Start.selectedDate).format("YYYY-MM-DD") }},
-	"end_date": {{ moment(DatePicker_End.selectedDate).format("YYYY-MM-DD") }},
-	"reason": "{{inp_reason.text}}",
-	"total_days": "{{txt_totalDays.text}}"
+  "name": "{{Input_username.text}}",
+  "leave_type": "{{Select_LeaveType.selectedOptionValue}}",
+  "start_date": {{ moment(DatePicker_Start.selectedDate).format("YYYY-MM-DD") }},
+  "end_date": {{ moment(DatePicker_End.selectedDate).format("YYYY-MM-DD") }},
+  "reason": "{{Input_Reason.text}}",
+  "total_days": "{{txt_totalDays.text}}",
+  "attachment_path": "{{this.params.file_path}}" 
 }

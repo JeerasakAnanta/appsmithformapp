@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n\t\"name\": \"{{Input_username.text}}\",\n\t\"leave_type\": \"{{Select_LeaveType.selectedOptionValue}}\",\n\t\"start_date\": {{ moment(DatePicker_Start.selectedDate).format(\"YYYY-MM-DD\") }},\n\t\"end_date\": {{ moment(DatePicker_End.selectedDate).format(\"YYYY-MM-DD\") }},\n\t\"reason\": \"{{inp_reason.text}}\",\n\t\"total_days\": \"{{txt_totalDays.text}}\"\n}",
+      "body": "{\n  \"name\": \"{{Input_username.text}}\",\n  \"leave_type\": \"{{Select_LeaveType.selectedOptionValue}}\",\n  \"start_date\": {{ moment(DatePicker_Start.selectedDate).format(\"YYYY-MM-DD\") }},\n  \"end_date\": {{ moment(DatePicker_End.selectedDate).format(\"YYYY-MM-DD\") }},\n  \"reason\": \"{{Input_Reason.text}}\",\n  \"total_days\": \"{{txt_totalDays.text}}\",\n  \"attachment_path\": \"{{this.params.file_path}}\" \n}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
