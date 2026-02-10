@@ -1,6 +1,7 @@
 {
   "gitSyncId": "6989a863233bc531e8c7654a_2a35f866-52fa-40fd-b8e0-dfff2e2fa628",
   "unpublishedPage": {
+    "isHidden": false,
     "layouts": [
       {
         "dsl": {
@@ -26,7 +27,7 @@
         }
       }
     ],
-    "name": "Page1",
-    "slug": "page1"
+    "name": "ฟอร์มการลา  Appsithm",
+    "slug": "appsithm"
   }
 }

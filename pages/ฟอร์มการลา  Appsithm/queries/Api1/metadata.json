@@ -1,6 +1,6 @@
 {
   "gitSyncId": "6989a863233bc531e8c7654a_3b28e960-92bf-4e91-8708-fd1f1e6fbabb",
-  "id": "Page1_Api1",
+  "id": "ฟอร์มการลา  Appsithm_Api1",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -49,7 +49,7 @@
       "pluginId": "restapi-plugin"
     },
     "name": "Api1",
-    "pageId": "Page1",
+    "pageId": "ฟอร์มการลา  Appsithm",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
