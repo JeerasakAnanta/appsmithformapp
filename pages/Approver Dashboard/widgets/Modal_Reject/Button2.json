@@ -1,0 +1,54 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 22,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "yfxfngg4cc",
+  "leftColumn": 45,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{ \n  UpdateStatus.run(\n    () => { \n      showAlert('ปฏิเสธคำขอเรียบร้อย', 'success'); \n      closeModal('Modal_Reject');  // ปิด Modal\n      \n      // สั่งรีเฟรชตาราง (ใส่ชื่อ Query ดึงข้อมูลของคุณตรงนี้)\n      Get_All_Requests.run(); \n    }, \n    () => showAlert('เกิดข้อผิดพลาด', 'error'), \n    { \n      // ส่งค่าไปให้ API\n      id: appsmith.store.selected_request_id,  // ดึง ID ที่แปะไว้ตะกี้\n      status: 'Rejected',\n      reason: inp_reject_reason.text           // ดึงเหตุผลจากช่องกรอก\n    } \n  ) \n}}",
+  "parentId": "wxgdfb4woz",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "text": "ยืนยันการปฏิเสธ",
+  "topRow": 18,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "zfkp5duw0e",
+  "widgetName": "Button2"
+}

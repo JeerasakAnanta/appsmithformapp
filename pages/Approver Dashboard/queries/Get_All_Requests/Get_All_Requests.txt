@@ -1,0 +1,1 @@
+SELECT  * FROM leave_requests WHERE status = 'Pending' ORDER BY created_at ASC 

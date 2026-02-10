@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "6989a863233bc531e8c7654a_3b28e960-92bf-4e91-8708-fd1f1e6fbabb",
-  "id": "ฟอร์มการลา  Appsithm_Api1",
+  "gitSyncId": "6989a863233bc531e8c7654a_1f3b956a-7bae-4a14-bb90-08d1dc741db8",
+  "id": "Approver Dashboard_ApproveLeave",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -48,8 +48,8 @@
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin"
     },
-    "name": "Api1",
-    "pageId": "ฟอร์มการลา  Appsithm",
+    "name": "ApproveLeave",
+    "pageId": "Approver Dashboard",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }

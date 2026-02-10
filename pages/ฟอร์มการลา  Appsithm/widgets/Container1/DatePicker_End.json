@@ -5,7 +5,7 @@
   "bottomRow": 28,
   "boxShadow": "none",
   "closeOnSelection": true,
-  "dateFormat": "DD-MM-YYYY",
+  "dateFormat": "DD/MM/YYYY HH:mm",
   "datePickerType": "DATE_PICKER",
   "dynamicBindingPathList": [
     {
@@ -28,7 +28,7 @@
   "firstDayOfWeek": 0,
   "isDisabled": false,
   "isLoading": false,
-  "isRequired": false,
+  "isRequired": true,
   "isVisible": true,
   "key": "2flpo3b2ue",
   "label": "สิ้นสุดวันที่",
@@ -47,8 +47,8 @@
   "mobileRightColumn": 16,
   "mobileTopRow": 31,
   "needsErrorInfo": false,
-  "originalBottomRow": 22,
-  "originalTopRow": 15,
+  "originalBottomRow": 28,
+  "originalTopRow": 21,
   "parentColumnSpace": 14.234375,
   "parentId": "j1i62n5akg",
   "parentRowSpace": 10,

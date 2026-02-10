@@ -1,10 +1,11 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 47,
+  "bottomRow": 22,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-  "buttonVariant": "PRIMARY",
+  "buttonStyle": "PRIMARY",
+  "buttonVariant": "SECONDARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
     {
@@ -14,7 +15,6 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -24,30 +24,26 @@
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "8pop1tw82l",
-  "leftColumn": 1,
+  "key": "yfxfngg4cc",
+  "leftColumn": 28,
   "minWidth": 120,
-  "mobileBottomRow": 25,
-  "mobileLeftColumn": 17,
-  "mobileRightColumn": 33,
-  "mobileTopRow": 21,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 31,
+  "mobileRightColumn": 47,
+  "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{SubmitLeaveRequest.run().then(() => {\n  showAlert('ส่งข้อมูลเรียบร้อย', '');\n});}}",
-  "originalBottomRow": 47,
-  "originalTopRow": 43,
-  "parentColumnSpace": 15.5078125,
-  "parentId": "j1i62n5akg",
-  "parentRowSpace": 10,
+  "onClick": "{{closeModal(Modal_Reject.name);}}",
+  "parentId": "wxgdfb4woz",
   "placement": "CENTER",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 17,
-  "text": "ส่งคำขอลา",
-  "topRow": 43,
+  "rightColumn": 44,
+  "text": "Close",
+  "topRow": 18,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "btzf94pk9l",
-  "widgetName": "btn_submit"
+  "widgetId": "wlooip8fyn",
+  "widgetName": "Button1"
 }
