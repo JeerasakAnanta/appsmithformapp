@@ -19,6 +19,8 @@
       "key": "onClick"
     }
   ],
+  "iconAlign": "left",
+  "iconName": "log-out",
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
@@ -32,6 +34,8 @@
   "mobileTopRow": 24,
   "needsErrorInfo": false,
   "onClick": "{{Auth.signIn();}}",
+  "originalBottomRow": 43,
+  "originalTopRow": 38,
   "parentColumnSpace": 12.01953125,
   "parentId": "5mks16mql6",
   "parentRowSpace": 10,
@@ -41,8 +45,8 @@
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
   "rightColumn": 42,
-  "text": "Submit",
-  "topRow": 39,
+  "text": "login",
+  "topRow": 38,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "6rpkhrnkwy",

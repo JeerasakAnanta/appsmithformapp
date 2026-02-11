@@ -27,6 +27,7 @@
       }
     ],
     "name": "ApproverDashboard",
-    "slug": "approverdashboard"
+    "slug": "approverdashboard",
+    "uniqueSlug": "approverdashboard"
   }
 }

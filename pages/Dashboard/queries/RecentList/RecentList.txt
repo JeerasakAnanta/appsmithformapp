@@ -1,0 +1,5 @@
+-- show list  
+SELECT start_date , leave_type , total_days, status  FROM leave_requests 
+WHERE employee_name = {{ appsmith.store.currentUser.username }}
+ORDER BY created_at DESC 
+LIMIT 5;

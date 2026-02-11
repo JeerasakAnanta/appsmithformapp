@@ -28,6 +28,7 @@
       }
     ],
     "name": "Leaveform",
-    "slug": "leaveform"
+    "slug": "leaveform",
+    "uniqueSlug": "leaveform"
   }
 }

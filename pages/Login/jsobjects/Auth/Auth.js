@@ -5,10 +5,10 @@ export default {
 		const password = Input_password.text;
 
 		// เช็คว่ากรอกข้อมูลครบไหม
-		if(!email || !password) {
-			showAlert("กรุณากรอก Email และ Password", "warning");
+		if(!email || !password  ) {
+			showAlert("กรุณากรอก Email  และ Password ให้ครบถ้วน", "warning");
 			return;
-		}
+		} 
 
 		try {
 			// 2. เรียก API
@@ -28,15 +28,15 @@ export default {
 
 			// 5. เช็ค Logic (ปรับปรุงใหม่)
 			if (response.success === true) {
-				
+
 				// --- [ส่วนที่ต้องเพิ่มและแก้ไข] ---
-				
+
 				// เก็บ Token (สำคัญ: ใส่ parameter ตัวที่ 3 เป็น true เพื่อให้จำค่าแม้ refresh หน้า)
 				storeValue('authToken', response.token, true); 
-				
+
 				// เก็บข้อมูล User
 				storeValue('currentUser', response.data, true);
-				
+
 				// (Optional) ตัวแปรเช็คสถานะ
 				storeValue('isLoggedIn', true, true); 
 

@@ -46,6 +46,10 @@
       "isDefault": false
     }
   ],
+  "staticUrlSettings": {
+    "enabled": true,
+    "uniqueSlug": "leavefromapp"
+  },
   "unpublishedAppLayout": {
     "type": "DESKTOP"
   },

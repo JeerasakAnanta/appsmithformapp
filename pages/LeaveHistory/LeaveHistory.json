@@ -27,6 +27,7 @@
       }
     ],
     "name": "LeaveHistory",
-    "slug": "leavehistory"
+    "slug": "leavehistory",
+    "uniqueSlug": "leavehistory"
   }
 }

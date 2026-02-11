@@ -1,6 +1,6 @@
 {
   "animateLoading": true,
-  "bottomRow": 20,
+  "bottomRow": 46,
   "capSide": 0,
   "capType": "nc",
   "dividerColor": "#858282",
@@ -16,8 +16,8 @@
   "mobileTopRow": 12,
   "needsErrorInfo": false,
   "orientation": "horizontal",
-  "originalBottomRow": 20,
-  "originalTopRow": 16,
+  "originalBottomRow": 46,
+  "originalTopRow": 42,
   "parentColumnSpace": 17.9375,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -26,9 +26,9 @@
   "rightColumn": 63,
   "strokeStyle": "solid",
   "thickness": 2,
-  "topRow": 16,
+  "topRow": 42,
   "type": "DIVIDER_WIDGET",
   "version": 1,
-  "widgetId": "ffya5qxkvp",
-  "widgetName": "Divider1"
+  "widgetId": "k2t3hvp25r",
+  "widgetName": "Divider1Copy"
 }
