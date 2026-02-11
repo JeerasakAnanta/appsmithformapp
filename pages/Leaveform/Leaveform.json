@@ -1,23 +1,24 @@
 {
-  "gitSyncId": "698ba199b7815601c8ae8329_581e6639-9311-4805-8b6c-6351777dec66",
+  "gitSyncId": "6989a863233bc531e8c7654a_2a35f866-52fa-40fd-b8e0-dfff2e2fa628",
   "unpublishedPage": {
-    "isHidden": true,
+    "isHidden": false,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 580,
+          "bottomRow": 650,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
+          "dynamicTriggerPathList": [],
           "leftColumn": 0,
-          "minHeight": 580,
+          "minHeight": 1292,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
-          "rightColumn": 1224,
+          "rightColumn": 4896,
           "snapColumns": 64,
-          "snapRows": 56,
+          "snapRows": 124,
           "topRow": 0,
           "type": "CANVAS_WIDGET",
           "version": 94,
@@ -26,7 +27,7 @@
         }
       }
     ],
-    "name": "Login",
-    "slug": "login"
+    "name": "Leaveform",
+    "slug": "leaveform"
   }
 }

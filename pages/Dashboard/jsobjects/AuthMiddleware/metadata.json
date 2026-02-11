@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "698ba199b7815601c8ae8329_5f8f44d6-43bd-416a-ad47-d29ae8de0227",
+  "id": "Dashboard_AuthMiddleware",
+  "unpublishedCollection": {
+    "name": "AuthMiddleware",
+    "pageId": "Dashboard",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

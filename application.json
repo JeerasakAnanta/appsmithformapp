@@ -3,23 +3,28 @@
   "appLayout": {
     "type": "DESKTOP"
   },
+  "applicationDetail": {
+    "navigationSetting": {
+      "colorStyle": "light",
+      "logoAssetId": "",
+      "logoConfiguration": "logoAndApplicationTitle",
+      "navStyle": "sidebar",
+      "orientation": "side",
+      "position": "static",
+      "showNavbar": false,
+      "showSignIn": true
+    },
+    "themeSetting": {
+      "appMaxWidth": "LARGE",
+      "density": 1.0,
+      "sizing": 1.0
+    }
+  },
   "applicationVersion": 2,
   "collapseInvisibleWidgets": true,
   "color": "#F4FFDE",
   "evaluationVersion": 2,
   "pages": [
-    {
-      "id": "ฟอร์มการลา  Appsithm",
-      "isDefault": true
-    },
-    {
-      "id": "Approver Dashboard",
-      "isDefault": false
-    },
-    {
-      "id": "ประวัติการลา My Leave History",
-      "isDefault": false
-    },
     {
       "id": "Login",
       "isDefault": false
@@ -27,9 +32,38 @@
     {
       "id": "Dashboard",
       "isDefault": false
+    },
+    {
+      "id": "LeaveHistory",
+      "isDefault": false
+    },
+    {
+      "id": "Leaveform",
+      "isDefault": true
+    },
+    {
+      "id": "ApproverDashboard",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {
     "type": "DESKTOP"
+  },
+  "unpublishedApplicationDetail": {
+    "navigationSetting": {
+      "colorStyle": "light",
+      "logoAssetId": "",
+      "logoConfiguration": "logoAndApplicationTitle",
+      "navStyle": "sidebar",
+      "orientation": "side",
+      "position": "static",
+      "showNavbar": false,
+      "showSignIn": true
+    },
+    "themeSetting": {
+      "appMaxWidth": "LARGE",
+      "density": 1.0,
+      "sizing": 1.0
+    }
   }
 }
