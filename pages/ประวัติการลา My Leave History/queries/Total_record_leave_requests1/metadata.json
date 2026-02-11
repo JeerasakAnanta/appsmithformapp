@@ -1,16 +1,16 @@
 {
-  "gitSyncId": "6989a863233bc531e8c7654a_4d99069f-6ce2-415a-b1f4-f4269ee26f8b",
-  "id": "Approver Dashboard_Get_All_Requests",
+  "gitSyncId": "698ba199b7815601c8ae8329_bc806a2a-f5f1-4e5d-8b93-e65ce9719f4e",
+  "id": "ประวัติการลา My Leave History_Total_record_leave_requests1",
   "pluginId": "mysql-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT  * FROM leave_requests WHERE status = 'Pending' ORDER BY created_at ASC",
+      "body": "SELECT COUNT(*) from leave_requests WHERE employee_name LIKE '%{{Table_History.searchText}}%';",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ],
       "timeoutInMillisecond": 10000
@@ -22,9 +22,13 @@
       "name": "Mysql",
       "pluginId": "mysql-plugin"
     },
-    "dynamicBindingPathList": [],
-    "name": "Get_All_Requests",
-    "pageId": "Approver Dashboard",
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "name": "Total_record_leave_requests1",
+    "pageId": "ประวัติการลา My Leave History",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }

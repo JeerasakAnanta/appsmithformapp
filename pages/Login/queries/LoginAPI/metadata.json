@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "6989a863233bc531e8c7654a_81447a21-9b14-49e4-bfe2-292672bd9636",
-  "id": "ฟอร์มการลา  Appsithm_SubmitLeaveRequest",
+  "gitSyncId": "698ba199b7815601c8ae8329_f6e7c729-d655-4a02-94c3-71d676c38d90",
+  "id": "Login_LoginAPI",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"name\": \"{{Input_username.text}}\",\n  \"leave_type\": \"{{Select_LeaveType.selectedOptionValue}}\",\n  \"start_date\": {{ moment(DatePicker_Start.selectedDate).format(\"YYYY-MM-DD\") }},\n  \"end_date\": {{ moment(DatePicker_End.selectedDate).format(\"YYYY-MM-DD\") }},\n  \"reason\": \"{{Input_Reason.text}}\",\n  \"total_days\": \"{{txt_totalDays.text}}\",\n  \"attachment_path\": \"{{this.params.file_path}}\" \n}",
+      "body": "{\n  \"email\": \"{{Input_email.text}}\",\n  \"password\": \"{{Input_password.text}}\"\n}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
@@ -21,7 +21,7 @@
       "httpMethod": "POST",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/webhook/api/v1/create-request",
+      "path": "/webhook/api/v1/login",
       "pluginSpecifiedTemplates": [
         {
           "value": true
@@ -44,8 +44,8 @@
         "key": "body"
       }
     ],
-    "name": "SubmitLeaveRequest",
-    "pageId": "ฟอร์มการลา  Appsithm",
+    "name": "LoginAPI",
+    "pageId": "Login",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }

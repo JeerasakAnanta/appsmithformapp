@@ -31,7 +31,7 @@
   "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": "{{ \n  Select_LeaveType.selectedOptionValue === 'sick' && Number(txt_totalDays.text) >= 3 \n}}",
+  "isVisible": "{{ \n  Select_LeaveType.selectedOptionValue === 'sick'\n}}",
   "key": "dvp09vwamp",
   "label": "แนบไฟล์",
   "leftColumn": 1,

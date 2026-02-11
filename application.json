@@ -1,7 +1,7 @@
 {
   "appIsExample": false,
   "appLayout": {
-    "type": "FLUID"
+    "type": "DESKTOP"
   },
   "applicationVersion": 2,
   "collapseInvisibleWidgets": true,
@@ -15,9 +15,21 @@
     {
       "id": "Approver Dashboard",
       "isDefault": false
+    },
+    {
+      "id": "ประวัติการลา My Leave History",
+      "isDefault": false
+    },
+    {
+      "id": "Login",
+      "isDefault": false
+    },
+    {
+      "id": "Dashboard",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {
-    "type": "FLUID"
+    "type": "DESKTOP"
   }
 }

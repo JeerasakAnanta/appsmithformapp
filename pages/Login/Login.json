@@ -1,24 +1,23 @@
 {
-  "gitSyncId": "6989a863233bc531e8c7654a_2a35f866-52fa-40fd-b8e0-dfff2e2fa628",
+  "gitSyncId": "698ba199b7815601c8ae8329_581e6639-9311-4805-8b6c-6351777dec66",
   "unpublishedPage": {
-    "isHidden": false,
+    "isHidden": true,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 650,
+          "bottomRow": 380,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
-          "dynamicTriggerPathList": [],
           "leftColumn": 0,
-          "minHeight": 1292,
+          "minHeight": 580,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
-          "rightColumn": 4896,
+          "rightColumn": 1224,
           "snapColumns": 64,
-          "snapRows": 124,
+          "snapRows": 56,
           "topRow": 0,
           "type": "CANVAS_WIDGET",
           "version": 94,
@@ -27,7 +26,7 @@
         }
       }
     ],
-    "name": "ฟอร์มการลา  Appsithm",
-    "slug": "appsithm"
+    "name": "Login",
+    "slug": "login"
   }
 }

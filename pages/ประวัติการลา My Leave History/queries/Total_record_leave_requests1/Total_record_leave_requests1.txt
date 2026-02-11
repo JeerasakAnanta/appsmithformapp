@@ -1,0 +1,1 @@
+SELECT COUNT(*) from leave_requests WHERE employee_name LIKE '%{{Table_History.searchText}}%';

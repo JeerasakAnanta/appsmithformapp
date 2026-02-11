@@ -1,0 +1,12 @@
+SELECT
+  *
+FROM
+  leave_requests
+WHERE
+  employee_name LIKE '%{{Table_History.searchText}}%'
+ORDER BY
+  {{Table_History.sortOrder.column || 'id'}} {{Table_History.sortOrder.order !== "desc" ? "" : "DESC"}}
+LIMIT
+  {{Table_History.pageSize}}
+OFFSET
+  {{Table_History.pageOffset}}
