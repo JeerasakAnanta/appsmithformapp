@@ -4,7 +4,7 @@
   ],
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 42,
+  "bottomRow": 45,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "dynamicBindingPathList": [
@@ -46,15 +46,15 @@
   "originalBottomRow": 42,
   "originalTopRow": 38,
   "parentColumnSpace": 16.140625,
-  "parentId": "j1i62n5akg",
+  "parentId": "l7q70jc2ca",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "hug",
   "rightColumn": 17,
   "selectedFiles": [],
-  "topRow": 38,
+  "topRow": 41,
   "type": "FILE_PICKER_WIDGET_V2",
   "version": 1,
-  "widgetId": "zr8k08vp5d",
+  "widgetId": "pre8lr9bbu",
   "widgetName": "file_certificate"
 }

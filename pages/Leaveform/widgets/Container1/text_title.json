@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 5,
+  "bottomRow": 6,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -34,7 +34,7 @@
   "originalTopRow": 1,
   "overflow": "NONE",
   "parentColumnSpace": 14.234375,
-  "parentId": "j1i62n5akg",
+  "parentId": "l7q70jc2ca",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
@@ -43,10 +43,10 @@
   "text": "ฟอร์มสำหรับการลา",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 1,
+  "topRow": 2,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "8fi5iyyh3n",
+  "widgetId": "yyp1jqvbwc",
   "widgetName": "text_title"
 }

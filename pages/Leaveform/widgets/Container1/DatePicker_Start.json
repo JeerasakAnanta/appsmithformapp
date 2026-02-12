@@ -2,10 +2,10 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 28,
+  "bottomRow": 29,
   "boxShadow": "none",
   "closeOnSelection": true,
-  "dateFormat": "DD/MM/YYYY",
+  "dateFormat": "DD/MM/YYYY HH:mm",
   "datePickerType": "DATE_PICKER",
   "dynamicBindingPathList": [
     {
@@ -50,16 +50,16 @@
   "originalBottomRow": 28,
   "originalTopRow": 21,
   "parentColumnSpace": 14.234375,
-  "parentId": "j1i62n5akg",
+  "parentId": "l7q70jc2ca",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 17,
   "shortcuts": false,
   "timePrecision": "minute",
-  "topRow": 21,
+  "topRow": 22,
   "type": "DATE_PICKER_WIDGET2",
   "version": 2,
-  "widgetId": "4yrhqs68wp",
+  "widgetId": "gvft553pyq",
   "widgetName": "DatePicker_Start"
 }

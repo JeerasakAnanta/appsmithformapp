@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 37,
+  "bottomRow": 41,
   "boxShadow": "none",
   "defaultText": "",
   "dynamicBindingPathList": [
@@ -41,7 +41,7 @@
   "originalBottomRow": 37,
   "originalTopRow": 30,
   "parentColumnSpace": 16.140625,
-  "parentId": "j1i62n5akg",
+  "parentId": "l7q70jc2ca",
   "parentRowSpace": 10,
   "placeholderText": "เหตุผล",
   "renderMode": "CANVAS",
@@ -49,9 +49,9 @@
   "responsiveBehavior": "fill",
   "rightColumn": 34,
   "showStepArrows": false,
-  "topRow": 30,
+  "topRow": 34,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "fr209sn4ku",
+  "widgetId": "qpp2vjka7p",
   "widgetName": "Input_Reason"
 }

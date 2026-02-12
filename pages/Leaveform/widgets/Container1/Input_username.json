@@ -3,15 +3,18 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 12,
+  "bottomRow": 13,
   "boxShadow": "none",
-  "defaultText": "",
+  "defaultText": "{{appsmith.store.currentUser.username}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -42,7 +45,7 @@
   "originalBottomRow": 12,
   "originalTopRow": 5,
   "parentColumnSpace": 14.234375,
-  "parentId": "j1i62n5akg",
+  "parentId": "l7q70jc2ca",
   "parentRowSpace": 10,
   "placeholderText": "ชื่อ นามสกุล",
   "renderMode": "CANVAS",
@@ -50,9 +53,9 @@
   "responsiveBehavior": "fill",
   "rightColumn": 33,
   "showStepArrows": false,
-  "topRow": 5,
+  "topRow": 6,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "2s6x6jv76j",
+  "widgetId": "7u14fm7giu",
   "widgetName": "Input_username"
 }

@@ -1,20 +1,21 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 49,
+  "bottomRow": 6,
   "boxShadow": "none",
-  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonColor": "#fca5a5",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
     {
-      "key": "buttonColor"
-    },
-    {
       "key": "borderRadius"
     }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -24,30 +25,28 @@
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "8pop1tw82l",
-  "leftColumn": 1,
+  "key": "g8kel31t33",
+  "leftColumn": 57.9047619047619,
   "minWidth": 120,
-  "mobileBottomRow": 25,
-  "mobileLeftColumn": 17,
-  "mobileRightColumn": 33,
-  "mobileTopRow": 21,
+  "mobileBottomRow": 10,
+  "mobileLeftColumn": 45,
+  "mobileRightColumn": 61,
+  "mobileTopRow": 6,
   "needsErrorInfo": false,
-  "onClick": "{{JSObject1.submitLeave();\nnavigateTo('LeaveHistory', {}, 'SAME_WINDOW');}}",
-  "originalBottomRow": 47,
-  "originalTopRow": 43,
-  "parentColumnSpace": 15.5078125,
-  "parentId": "l7q70jc2ca",
+  "onClick": "{{\n  clearStore();\n  navigateTo('Login');\n}}",
+  "parentColumnSpace": 14.171924203634262,
+  "parentId": "e1s03v8s3b",
   "parentRowSpace": 10,
   "placement": "CENTER",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 17,
-  "text": "ส่งคำขอลา",
-  "topRow": 45,
+  "rightColumn": 64,
+  "text": "logout",
+  "topRow": 2,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "33ekc7kdfr",
-  "widgetName": "btn_submit"
+  "widgetId": "emv0h86n3g",
+  "widgetName": "Button_logout"
 }
