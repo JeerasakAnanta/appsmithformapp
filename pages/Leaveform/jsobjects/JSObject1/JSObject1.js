@@ -1,82 +1,100 @@
 export default {
-	submitLeave: async () => {
+  submitLeave: async () => {
 
-		// --- 1. Get Values from Widgets ---
-		// Make sure to use .text for inputs and .selectedOptionValue for selects
-		const name = Input_username.text; 													// 
-		const leaveType = Select_LeaveType.selectedOptionValue;  		// 
-		const startDate = DatePicker_Start.selectedDate; 						// Check your widget name for Start Date
-		const endDate = DatePicker_End.selectedDate;     						// Check your widget name for End Date
-		const reason = Input_Reason.text;                						// Check your widget name for Reason
+    // --- 1. Get Values from Widgets ---
+    const name = Input_username.text?.trim();
+    const leaveType = Select_LeaveType.selectedOptionValue;
+    const startDate = DatePicker_Start.selectedDate;
+    const endDate = DatePicker_End.selectedDate;
+    const reason = Input_Reason.text?.trim();
 
-		// --- 2. General Validation (Check if empty) ---
-		if (!name) {
-			showAlert('⚠️ กรุณาระบุชื่อ-นามสกุล (Please enter your name)', 'error');
-			return; 
-		}
-		if (!leaveType) {
-			showAlert('⚠️ กรุณาเลือกประเภทการลา (Please select leave type)', 'error');
-			return;
-		}
-		if (!startDate || !endDate) {
-			showAlert('⚠️ กรุณาระบุวันที่ลา (Please select dates)', 'error');
-			return;
-		}
+    // --- 2. General Validation ---
+    if (!name) {
+      showAlert('⚠️ กรุณาระบุชื่อ-นามสกุล (Please enter your name)', 'error');
+      return;
+    }
 
-		// --- 3. Specific Logic: Sick Leave requires File ---
-		const isSick = leaveType === 'sick';
-		// Safe check for files
-		const hasFile = file_certificate.files && file_certificate.files.length > 0;
+    if (!leaveType) {
+      showAlert('⚠️ กรุณาเลือกประเภทการลา (Please select leave type)', 'error');
+      return;
+    }
 
-		if (isSick && !hasFile) {
-			showAlert('⚠️ กรณีลาป่วย จำเป็นต้องแนบใบรับรองแพทย์ครับ (Medical certificate required)', 'error');
-			return;
-		}
+    if (!startDate || !endDate) {
+      showAlert('⚠️ กรุณาระบุวันที่ลา (Please select dates)', 'error');
+      return;
+    }
 
-		// --- 4. Submission Process ---
-		try {
-			let filePath = ''; // Default empty if no file
+    const start = new Date(startDate);
+    const end = new Date(endDate);
 
-			if (hasFile) {
-				// Create unique filename: YYYYMMDD_HHmm_OriginalName
-				const timestamp = moment().format('YYYYMMDD_HHmm'); 
-				const originalName = file_certificate.files[0].name;
-				// Remove spaces/special chars from filename to avoid URL issues
-				const cleanName = originalName.replace(/\s+/g, '_'); 
-				const uniqueFileName = `${timestamp}_${cleanName}`;
+    if (end < start) {
+      showAlert('⚠️ วันที่สิ้นสุดต้องมากกว่าหรือเท่ากับวันเริ่มต้น', 'error');
+      return;
+    }
 
-				showAlert('⏳ กำลังอัปโหลดไฟล์... (Uploading...)', 'info');
+    // --- 3. Calculate Total Days ---
+    const diffTime = end - start;
+    const totalDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)) + 1;
 
-				// Upload to MinIO (Make sure your query expects 'fileName' and 'fileData')
-				await UploadToMinIO.run({ 
-					fileName: uniqueFileName,
-					fileData: file_certificate.files[0] 
-				});
+    // --- 4. File Validation (Sick Leave) ---
+    const isSick = leaveType === 'sick';
 
-				// Set the path to save in DB
-				filePath = 'leaves/' + uniqueFileName;
-			}
+    const hasFile =
+      file_certificate.files &&
+      Array.isArray(file_certificate.files) &&
+      file_certificate.files.length > 0;
 
-			// Insert into Database
-			await SubmitLeaveRequest.run({
-				name: name,
-				leave_type: leaveType,
-				start_date: startDate,
-				end_date: endDate,
-				reason: reason,
-				file_path: filePath,
-				total_days: 0 // You might want to calculate this using moment.js diff
-			});
+    if (isSick && !hasFile) {
+      showAlert('⚠️ กรณีลาป่วย จำเป็นต้องแนบใบรับรองแพทย์', 'error');
+      return;
+    }
 
-			showAlert('✅ ส่งใบลาเรียบร้อย (Submitted Successfully)', 'success');
+    // --- 5. Submission ---
+    try {
 
-			// Close Modal or Reset Form
-			resetWidget("Form1", true); 
-			// closeModal("ModalName"); // Optional: if this is inside a modal
+      let filePath = '';
 
-		} catch (error) {
-			console.error(error);
-			showAlert('❌ เกิดข้อผิดพลาด: ' + error.message, 'error');
-		}
-	}
-} 
+      if (hasFile) {
+
+        // Generate safe timestamp filename
+        const timestamp = new Date()
+          .toISOString()
+          .replace(/[-:T]/g, '')
+          .slice(0, 13);
+
+        const originalName = file_certificate.files[0].name;
+        const cleanName = originalName.replace(/[^a-zA-Z0-9._-]/g, '_');
+
+        const uniqueFileName = `${timestamp}_${cleanName}`;
+
+        showAlert('⏳ กำลังอัปโหลดไฟล์...', 'info');
+
+        await UploadToMinIO.run({
+          fileName: uniqueFileName,
+          fileData: file_certificate.files[0].data // use .data for base64
+        });
+
+        filePath = 'leaves/' + uniqueFileName;
+      }
+
+      // --- 6. Insert Database ---
+      await SubmitLeaveRequest.run({
+        name: name,
+        leave_type: leaveType,
+        start_date: startDate,
+        end_date: endDate,
+        reason: reason,
+        file_path: filePath,
+        total_days: totalDays
+      });
+
+      showAlert('✅ ส่งใบลาเรียบร้อย', 'success');
+      resetWidget("Form1", true);
+      navigateTo("LeaveHistory");
+
+    } catch (error) {
+      console.error("Submit Error:", error);
+      showAlert('❌ เกิดข้อผิดพลาด: ' + (error?.message || 'Unknown error'), 'error');
+    }
+  }
+}

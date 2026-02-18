@@ -1,0 +1,4 @@
+UPDATE leave_requests
+SET 
+    status = {{ this.params.status }},
+WHERE id = {{ this.params.id }};

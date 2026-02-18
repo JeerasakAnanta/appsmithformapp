@@ -1,0 +1,33 @@
+{
+  "animateLoading": true,
+  "bottomRow": 46,
+  "docUrl": "{{ Query1.data.signedUrl }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "docUrl"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "isCanvas": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "axsy37iht7",
+  "leftColumn": 4,
+  "mobileBottomRow": 46,
+  "mobileLeftColumn": 10,
+  "mobileRightColumn": 34,
+  "mobileTopRow": 6,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 6.9375,
+  "parentId": "rv9zjudz0h",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 62,
+  "topRow": 6,
+  "type": "DOCUMENT_VIEWER_WIDGET",
+  "version": 1,
+  "widgetId": "ze6lq35hrl",
+  "widgetName": "DocumentViewer1"
+}

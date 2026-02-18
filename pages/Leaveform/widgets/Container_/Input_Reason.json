@@ -1,65 +1,57 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
+  "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 29,
+  "bottomRow": 39,
   "boxShadow": "none",
-  "closeOnSelection": true,
-  "dateFormat": "DD/MM/YYYY HH:mm",
-  "datePickerType": "DATE_PICKER",
+  "defaultText": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "minDate"
     }
   ],
   "dynamicHeight": "FIXED",
-  "dynamicPropertyPathList": [
-    {
-      "key": "minDate"
-    }
-  ],
   "dynamicTriggerPathList": [],
-  "firstDayOfWeek": "0",
+  "iconAlign": "left",
+  "inputType": "TEXT",
   "isDisabled": false,
   "isLoading": false,
-  "isRequired": true,
+  "isRequired": false,
   "isVisible": true,
-  "key": "2flpo3b2ue",
-  "label": "วันที่เริ่มลา",
+  "key": "8b6q5ytnb3",
+  "label": "เหตุผลการลา",
   "labelAlignment": "left",
   "labelPosition": "Top",
+  "labelStyle": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
   "leftColumn": 1,
-  "maxDate": "2121-12-31T18:29:00.000Z",
   "maxDynamicHeight": 9000,
-  "minDate": "{{moment()}}",
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 38,
+  "mobileBottomRow": 41,
   "mobileLeftColumn": 0,
-  "mobileRightColumn": 16,
-  "mobileTopRow": 31,
+  "mobileRightColumn": 18,
+  "mobileTopRow": 34,
   "needsErrorInfo": false,
-  "originalBottomRow": 28,
-  "originalTopRow": 21,
-  "parentColumnSpace": 14.234375,
+  "originalBottomRow": 39,
+  "originalTopRow": 32,
+  "parentColumnSpace": 16.140625,
   "parentId": "l7q70jc2ca",
   "parentRowSpace": 10,
+  "placeholderText": "เหตุผล",
   "renderMode": "CANVAS",
+  "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 17,
-  "shortcuts": false,
-  "timePrecision": "minute",
-  "topRow": 22,
-  "type": "DATE_PICKER_WIDGET2",
+  "rightColumn": 34,
+  "showStepArrows": false,
+  "topRow": 32,
+  "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "gvft553pyq",
-  "widgetName": "DatePicker_Start"
+  "widgetId": "qpp2vjka7p",
+  "widgetName": "Input_Reason"
 }

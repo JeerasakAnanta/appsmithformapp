@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 47,
+  "bottomRow": 42,
   "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -46,11 +46,14 @@
     "id",
     "approver_comment",
     "approved_at",
-    "updated_at"
+    "updated_at",
+    "customColumn3"
   ],
-  "columnUpdatedAt": 1770760785240,
+  "columnUpdatedAt": 1770878282161,
   "columnWidthMap": {
-    "approver_comment": 193
+    "approver_comment": 193,
+    "leave_type": 136,
+    "total_days": 109
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -123,6 +126,24 @@
     },
     {
       "key": "primaryColumns.updated_at.computedValue"
+    },
+    {
+      "key": "primaryColumns.attachment_path.boxShadow"
+    },
+    {
+      "key": "primaryColumns.attachment_path.borderRadius"
+    },
+    {
+      "key": "primaryColumns.attachment_path.buttonColor"
+    },
+    {
+      "key": "primaryColumns.customColumn3.boxShadow"
+    },
+    {
+      "key": "primaryColumns.customColumn3.borderRadius"
+    },
+    {
+      "key": "primaryColumns.customColumn3.buttonColor"
     }
   ],
   "dynamicPropertyPathList": [
@@ -133,10 +154,10 @@
       "key": "primaryColumns.leave_type.textColor"
     },
     {
-      "key": "primaryColumns.customColumn1.onClick"
+      "key": "primaryColumns.customColumn2.onClick"
     },
     {
-      "key": "primaryColumns.customColumn2.onClick"
+      "key": "primaryColumns.customColumn1.onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -145,6 +166,12 @@
     },
     {
       "key": "primaryColumns.customColumn2.onClick"
+    },
+    {
+      "key": "primaryColumns.attachment_path.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn3.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -168,10 +195,10 @@
   "mobileRightColumn": 43,
   "mobileTopRow": 15,
   "needsErrorInfo": false,
-  "originalBottomRow": 47,
-  "originalTopRow": 9,
+  "originalBottomRow": 43,
+  "originalTopRow": 5,
   "parentColumnSpace": 14.234375,
-  "parentId": "0",
+  "parentId": "7ujywfs2r2",
   "parentRowSpace": 10,
   "primaryColumns": {
     "approved_at": {
@@ -246,10 +273,15 @@
       "alias": "attachment_path",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{table_approve.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{table_approve.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonColor": "{{table_approve.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "buttonLabel": "ดูไฟล์",
       "cellBackground": "",
-      "columnType": "text",
+      "columnType": "button",
       "computedValue": "{{(() => { const tableData = table_approve.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"attachment_path\"])) : attachment_path })()}}",
       "currencyCode": "USD",
+      "customAlias": "",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
@@ -265,8 +297,9 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "attachment_path",
+      "label": "ไฟล์เเบบ",
       "notation": "standard",
+      "onClick": "{{Query1.run().then(() => {\n  showModal(Modal1.name);\n});}}",
       "originalId": "attachment_path",
       "sticky": "",
       "textColor": "",
@@ -340,7 +373,7 @@
       "label": "อนุมัติ",
       "labelColor": "#FFFFFF",
       "notation": "standard",
-      "onClick": "{{ \n// เรียกใช้ API ชื่อ UpdateStatus (ตรวจสอบชื่อ API ของคุณด้วยนะครับ)\nApproveLeave.run(\n\t() => { \n\t\t\n\t\tApproveLeave.run();  // สั่งรีเฟรชตาราง table_approve ทันที\n\tGet_All_Requests.run()\n\t\tshowAlert('✅ อนุมัติคำขอเรียบร้อยแล้ว', 'success'); \n\t}, \n\t() => showAlert('❌ เกิดข้อผิดพลาด กรุณาลองใหม่', 'error'), \n\t{ \n\t\tstatus: 'Approved', \n\t\tid: table_approve.triggeredRow.id  // ดึง ID จากแถวที่กดปุ่มใน table_approve\n\t} \n) \n}}",
+      "onClick": "{{\n  ApproveLeave.run(\n    // 1. ส่วน Success: ถ้าส่งไป n8n สำเร็จ ให้ทำอะไรต่อ\n    () => { \n      Get_All_Requests.run(); // รีเฟรชข้อมูลในตารางใหม่ เพื่อดูสถานะล่าสุด\n      showAlert('✅ อนุมัติคำขอเรียบร้อยแล้ว', 'success'); \n    },\n    // 2. ส่วน Error: ถ้าส่งไม่ผ่าน\n    () => {\n      showAlert('❌ เกิดข้อผิดพลาด กรุณาลองใหม่', 'error');\n    },\n    // 3. ส่วน Params: ค่าที่จะส่งเข้าไปใน {{ this.params.xx }} ของ API\n    { \n      status: 'Approved', \n      id: currentRow.id  // หรือใช้ table_approve.triggeredRow.id\n    } \n  )\n}}",
       "originalId": "customColumn1",
       "sticky": "",
       "textSize": "0.875rem",
@@ -381,6 +414,45 @@
       "notation": "standard",
       "onClick": "{{ \n  // 1. เก็บ ID ของรายการที่กดไว้ในความจำชั่วคราว (Store)\n  storeValue('selected_request_id', table_approve.triggeredRow.id);\n\n  // 2. เปิด Modal ขึ้นมา\n  showModal('Modal_Reject');\n}}",
       "originalId": "customColumn2",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "customColumn3": {
+      "alias": "ดูไฟล์",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{table_approve.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{table_approve.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonColor": "{{table_approve.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "buttonLabel": "ดูไฟล์",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "columnType": "button",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "customColumn3",
+      "index": 10,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "ดูไฟล์",
+      "labelColor": "#FFFFFF",
+      "notation": "standard",
+      "onClick": "{{Query1.run().then(() => {\n  closeModal(Modal1.name);\n});}}",
+      "originalId": "customColumn3",
       "sticky": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
@@ -618,7 +690,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": false,
+      "isVisible": true,
       "label": "สถานะ",
       "notation": "standard",
       "originalId": "status",
@@ -701,11 +773,11 @@
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 61,
   "searchKey": "",
   "tableData": "{{Get_All_Requests.data}}",
   "textSize": "0.875rem",
-  "topRow": 9,
+  "topRow": 4,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

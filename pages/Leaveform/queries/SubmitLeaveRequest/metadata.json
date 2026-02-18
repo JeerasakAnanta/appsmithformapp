@@ -21,7 +21,7 @@
       "httpMethod": "POST",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/webhook/api/v1/create-request",
+      "path": "/webhook-test/api/v1/create-request",
       "pluginSpecifiedTemplates": [
         {
           "value": true

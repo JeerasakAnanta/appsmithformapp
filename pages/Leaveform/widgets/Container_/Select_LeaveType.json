@@ -27,7 +27,7 @@
   "isVisible": true,
   "key": "ikbx8zpgkc",
   "labelAlignment": "left",
-  "labelPosition": "Top",
+  "labelPosition": "Auto",
   "labelText": "ประเภทการลา",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,

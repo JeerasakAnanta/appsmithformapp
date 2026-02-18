@@ -6,6 +6,11 @@
     "pageId": "Login",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "variables": []
+    "variables": [
+      {
+        "name": "isLoading",
+        "value": "false"
+      }
+    ]
   }
 }

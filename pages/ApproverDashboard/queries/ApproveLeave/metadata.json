@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"request_id\": {{ this.params.id }},      \n  \"status\": {{ this.params.status }},\n  \"approver\": {{ appsmith.user.email }}\n}",
+      "body": "{\n  \"request_id\": {{ this.params.id }},\n  \"status\": {{ this.params.status }},\n  \"approver\": {{ appsmith.user.email }}\n}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
